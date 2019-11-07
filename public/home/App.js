@@ -13,7 +13,8 @@ class App extends Component {
             <div>
                 <!-- header goes here -->
                 <main>
-                    <p>Main App Page</p>
+                  <h1> Know your cities?</h1>
+                  <a href="./cities-list/cities-list.js"
                 </main>
             </div>
         `;
