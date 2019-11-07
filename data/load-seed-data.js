@@ -24,7 +24,7 @@ async function run() {
                     VALUES ($1, $2, $3, $4);
 
                 `,
-                [city.name, city.year, city.is_westcoast, city.nickname]);
+                [city.name, city.year, city.isWestcoast, city.nickname]);
 
 
 
