@@ -6,7 +6,7 @@ module.exports = [
         nickname: 'City of Roses'
     }, 
     {   
-        name: 'New York City, New York ',
+        name: 'New York City, New York',
         year: 1624,
         isWestCoast: false,
         nickname: 'The Big Apple'
