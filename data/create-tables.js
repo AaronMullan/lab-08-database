@@ -19,6 +19,13 @@ async function run() {
     
         // run a query to create tables
         await client.query(`
+            CREATE TABLE  cities (
+                id SERIAL PRIMARY KEY NOT NULL,
+                name VARCHAR(256) NOT NULL,
+                year INTEGER NOT NULL,
+                is_westcoast BOOLEAN NOT NULL,
+                nickname VARCHAR(256) NOT NULL
+            );
           
         `);
 
