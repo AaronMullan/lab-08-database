@@ -14,7 +14,7 @@ class App extends Component {
                 <!-- header goes here -->
                 <main>
                   <h1> Know your cities?</h1>
-                  <a href="./cities-list/cities-list.js"
+                <a href ="./cities-list.html">CLICK TO GO TO CITIES LIST</a>
                 </main>
             </div>
         `;
