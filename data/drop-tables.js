@@ -11,7 +11,7 @@ async function run() {
         await client.connect();
     
         await client.query(`
-
+            DROP TABLE IF EXISTS cities;
         `);
 
         console.log('drop tables complete');
