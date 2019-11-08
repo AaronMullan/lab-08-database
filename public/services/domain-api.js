@@ -1,6 +1,5 @@
 const URL = '/api';
 
-
 export async function getCities() {
     const url = `${URL}/cities`;
     

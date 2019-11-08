@@ -36,7 +36,7 @@ app.get ('/api/cities', async (req, res) => {
             id,
             name,
             year,
-            isWestCoast,
+            is_westcoast as "isWestcoast",
             nickname
         FROM CITIES;
             `);

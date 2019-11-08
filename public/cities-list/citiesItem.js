@@ -8,12 +8,12 @@ class CitiesItem extends Component {
         return /*html*/ `
         <li class = "city-item">
             <div class="info-container">
-                     <h2>${city.name}</h2>
-                      <p class="city-westCoast">${city.type}</p>
-                          </div>
+                <h2>${city.name}</h2>
+    <p class="city-westCoast">${city.isWestcoast}</p>
+        <p class="city-region">${city.region}</p>
         
-                 <p class="year">${city.year}</p>
-                 <p class="nickname">${city.nickname}</p>
+        <p class="year">${city.year}</p>
+    <p class="nickname">${city.nickname}</p>
                  </div>
                 </li>
 
