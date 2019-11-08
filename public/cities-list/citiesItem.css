@@ -6,12 +6,26 @@
     text-align: center;
     height: 200px;
     border: 1px solid black;
-    background-color: grey;
     padding: 5px;
 }
 
 
 .info-container {
-    border: 1px solid black;
+
+    
+}
+
+.city-westCoast {
+
+}
+
+.city-region {
+    
+}
+.nickname {
+font-weight: bold;
+}
+
+.year {
 
 }
