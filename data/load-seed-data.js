@@ -20,14 +20,10 @@ async function run() {
                 // Use a "parameterized query" to insert the data,
                 // Don't forget to "return" the client.query promise!
                 return client.query(`
-                    INSERT INTO cities (name, year, is_westcoast, nickname)
-                    VALUES ($1, $2, $3, $4);
-
+                    INSERT INTO cities (name, year, is_westcoast, nickname, region)
+                    VALUES ($1, $2, $3, $4, $5);
                 `,
-                [city.name, city.year, city.isWestcoast, city.nickname]);
-
-
-
+                [city.name, city.year, city.isWestcoast, city.nickname, city.region]);
             })
         );
 

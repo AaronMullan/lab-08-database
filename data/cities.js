@@ -47,7 +47,6 @@ module.exports = [
         isWestcoast: true,
         nickname: 'El Lay',
         region: 'Southwest'
-
     },
     {
         name: 'Orlando, Florida',

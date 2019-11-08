@@ -24,7 +24,8 @@ async function run() {
                 name VARCHAR(256) NOT NULL,
                 year INTEGER NOT NULL,
                 is_westcoast BOOLEAN NOT NULL,
-                nickname VARCHAR(256) NOT NULL
+                nickname VARCHAR(256) NOT NULL,
+                region VARCHAR(256) NOT NULL
             );
           
         `);
