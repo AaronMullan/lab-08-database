@@ -2,10 +2,25 @@ main {
     padding: 20px 10px;
 }
 
+.cities{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        padding: 10px;
+        height:auto;
+        grid-gap: 50px;
+
+}
 
 body {
-
     background-color: grey;
+}
+
+li {
+    width:300px;
+    height: auto;
 }
 p{
     color:white;
@@ -16,5 +31,5 @@ h1{
 }
 
 .header {
-    
+   
 }
