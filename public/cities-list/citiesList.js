@@ -1,4 +1,3 @@
-  
 import Component from '../Component.js';
 import CitiesItem from './citiesItem.js';
 
