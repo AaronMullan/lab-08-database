@@ -2,44 +2,38 @@ module.exports = [
     {
         name: 'Portland, Oregon',
         year: 1851,
-        isWestcoast: true,
-        nickname: 'City of Roses',
-        region: 'Pacific Northwest'
+        isWestCoast: true,
+        nickname: 'City of Rosess'
     },
     {
         name: 'New York City, New York',
         year: 1624,
-        isWestcoast: false,
-        nickname: 'The Big Apple',
-        region: 'North-east'
+        isWestCoast: false,
+        nickname: 'The Big Apple'
     },
     {
         name: 'Seattle, Washington',
         year: 1851,
-        isWestcoast: true,
-        nickname: 'Emerald City',
-        region: 'Pacific Northwest'
+        isWestCoast: true,
+        nickname: 'Emerald City'
     },
     {
         name:'Baltimore, Maryland',
         year: 1729,
-        isWestcoast: false,
-        nickname: 'Charm City',
-        region: 'North-east'
+        isWestCoast: false,
+        nickname: 'Charm City'
     },
     {
         name: 'New Orleans, Louisiana',
         year: 1718,
-        isWestcoast: false,
-        nickname: 'The Big Easy',
-        region: 'South-east'
+        isWestCoast: false,
+        nickname: 'The Big Easy'
     },
     {
         name: 'Dallas, Texas',
         year: 1841,
-        isWestcoast: false,
-        nickname: 'FunkyTown',
-        region: 'Southern Plains'
+        isWestCoast: false,
+        nickname: 'FunkyTown'
     },
     {
         name: 'Los Angeles, California',
@@ -51,8 +45,7 @@ module.exports = [
     {
         name: 'Orlando, Florida',
         year: 1885,
-        isWestcoast: false,
-        nickname:'The City Beautiful',
-        region: 'Southeast'
+        isWestCoast: false,
+        nickname:'The City Beautiful'
     },
 ];
