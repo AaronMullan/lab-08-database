@@ -5,6 +5,7 @@ class Header extends Component {
 
         return /*html*/` 
         <div>
+            <h1 class="header"> Know your cities?</h1>
         </div>
         `;
         

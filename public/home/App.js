@@ -13,7 +13,7 @@ class App extends Component {
             <div>
                 <!-- header goes here -->
                 <main>
-                  <h1> Know your cities?</h1>
+            
                 <a class ="button" href ="./cities-list.html">CLICK TO GO TO CITIES LIST</a>
                 </main>
             </div>
