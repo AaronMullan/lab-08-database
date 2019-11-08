@@ -16,7 +16,6 @@ async function run() {
         await Promise.all(
             // map every item in the array data
             cities.map(city => {
-console.log('city region', city.region);
                 // Use a "parameterized query" to insert the data,
                 // Don't forget to "return" the client.query promise!
                 return client.query(`
