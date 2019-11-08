@@ -9,7 +9,7 @@ class CitiesItem extends Component {
         <li class = "city-item">
             <div class="info-container">
                      <h2>${city.name}</h2>
-                      <p class="city-westCoast">${city.type}</p>
+                      <p class="city-westCoast">${city.isWestcoast}</p>
                           </div>
         
                  <p class="year">${city.year}</p>

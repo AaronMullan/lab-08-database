@@ -5,9 +5,9 @@ import CitiesItem from './citiesItem.js';
 class CitiesList extends Component {
     
     onRender(dom) {
-        const city = this.props.city;
-
-        city.forEach(city => {
+        const cities = this.props.cities;
+console.log(this.props);
+        cities.forEach(city => {
             const props = { city: city };
             const cityItem = new CitiesItem(props);
             const cityItemDOM = cityItem.renderDOM();
