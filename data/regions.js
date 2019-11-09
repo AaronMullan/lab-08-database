@@ -3,5 +3,5 @@ module.exports = [
     'Northeast',
     'Southeast',
     'Southern Plains',
-    'Southwest',
+    'Southwest'
 ];

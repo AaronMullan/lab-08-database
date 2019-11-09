@@ -30,17 +30,18 @@ async function run() {
         await Promise.all(
             // map every item in the array data
             cities.map(city => {
-
+                
                 const region = savedRegions.find(region => {
-                    return region.name === cities.region;
+                    return region.name === city.region;
                 });
                 // Use a "parameterized query" to insert the data,
                 // Don't forget to "return" the client.query promise!
+               
                 return client.query(`
-                    INSERT INTO cities (name, year, is_westcoast, nickname, region)
+                    INSERT INTO cities (name, year, is_westcoast, nickname, region_id)
                     VALUES ($1, $2, $3, $4, $5);
                 `,
-                [city.name, city.year, city.isWestcoast, city.nickname, region.name]);
+                [city.name, city.year, city.isWestcoast, city.nickname, region.id]);
             })
         );
 

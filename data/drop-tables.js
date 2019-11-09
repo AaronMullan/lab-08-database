@@ -12,6 +12,7 @@ async function run() {
     
         await client.query(`
             DROP TABLE IF EXISTS cities;
+            DROP TABLE IF EXISTS regions;
         `);
 
         console.log('drop tables complete');
