@@ -11,7 +11,7 @@ module.exports = [
         year: 1624,
         isWestcoast: false,
         nickname: 'The Big Apple',
-        region: 'North-east'
+        region: 'Northeast'
     },
     {
         name: 'Seattle, Washington',
@@ -25,14 +25,14 @@ module.exports = [
         year: 1729,
         isWestcoast: false,
         nickname: 'Charm City',
-        region: 'North-east'
+        region: 'Northeast'
     },
     {
         name: 'New Orleans, Louisiana',
         year: 1718,
         isWestcoast: false,
         nickname: 'The Big Easy',
-        region: 'South-east'
+        region: 'Southeast'
     },
     {
         name: 'Dallas, Texas',
