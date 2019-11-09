@@ -33,14 +33,14 @@ app.get ('/api/cities', async (req, res) => {
     try {
         const result = await client.query(`
         SELECT
-            id,
-            name,
-            year,
-            is_westcoast as "isWestcoast",
-            nickname,
-            region
-        FROM CITIES;
+                c.*,
+                r.name as region
+            FROM cities c
+            JOIN regions r
+            ON c.region_id = r.id
+            ORDER BY c.year;
             `);
+
         
         res.json(result.rows);
     }
@@ -52,8 +52,26 @@ app.get ('/api/cities', async (req, res) => {
 
 });
    
+app.post ('/api/cities'), async (req, res) => {
+    const city = req.body;
 
-
+    try {
+        const result = await client.query (`
+            INSERT INTO cities (name, year, isWestcoast, nickname, region)
+            VALUES ($1, $2, $3, $4, $5, $6)
+            RETURNING *;
+            `,
+        [city.name, city.year, city.isWestcoast, city.nickname, city.region]
+        );
+        res.json(result.rows[0]);    
+    }
+    catch (err) {
+        console.log(err);
+        res.status(500).json({
+            error: err.message || err
+        });
+    }
+};
 // Start the server
 // (use PORT from .env!)
 
