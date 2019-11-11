@@ -16,7 +16,7 @@ class CityForm extends Component {
                 url: formData.get('url'),
                 nickname: formData.get('nickname'),
                 year: parseInt(formData.get('year')),
-                isWestcoast: formData.get('is-Westcoast')
+                isWestcoast: formData.get('is-Westcoast') === 'on'
             };
 
             try {
