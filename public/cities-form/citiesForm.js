@@ -16,7 +16,7 @@ class CityForm extends Component {
                 url: formData.get('url'),
                 nickname: formData.get('nickname'),
                 year: parseInt(formData.get('year')),
-                isWestcoast: formData.get('is-Westcoast') === 'on'
+                isWestcoast: formData.get('westcoast') === 'on'
             };
 
             try {
@@ -73,10 +73,10 @@ class CityForm extends Component {
                                     <input id="nickname" name="name" placeholder="City Nickname">
                                     </p>
                                 
-                                    <fieldset for="is-Westcoast">
+                                    <fieldset for="westcoast">
                                         <legend>Is it Westcoast?</legend>
                                         <label class="horizontally-centered">
-                                     <input id="is-westcoast" name="is-westcoast" type="checkbox"> Yes</label>
+                                     <input id="westcoast" name="westcoast" type="checkbox"> Yes</label>
                                     </fieldset>
                                         <p>
                                             <button class="button">Add This City</button>

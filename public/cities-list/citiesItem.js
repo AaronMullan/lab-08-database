@@ -9,7 +9,7 @@ class CitiesItem extends Component {
         <li class = "city-item">
             <div class="info-container">
                 <h2>${city.name}</h2>
-    <p class="city-westCoast">is Westcoast?: ${city.isWestcoast}</p>
+    <p class="city-westCoast">is Westcoast?: ${city.westcoast}</p>
         <p class="city-region">Region: ${city.region}</p>
         <div class="image-container">
         <img class ="image" src="${city.url}" alt="${city.name}">

@@ -38,10 +38,10 @@ async function run() {
                 // Don't forget to "return" the client.query promise!
                
                 return client.query(`
-                    INSERT INTO cities (name, year, is_westcoast, nickname, region_id, url)
+                    INSERT INTO cities (name, year, westcoast, nickname, region_id, url)
                     VALUES ($1, $2, $3, $4, $5, $6);
                 `,
-                [city.name, city.year, city.isWestcoast, city.nickname, region.id, city.url]);
+                [city.name, city.year, city.westcoast, city.nickname, region.id, city.url]);
             })
         );
 
