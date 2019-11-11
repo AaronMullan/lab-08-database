@@ -12,7 +12,7 @@ class CitiesItem extends Component {
     <p class="city-westCoast">is Westcoast?: ${city.isWestcoast}</p>
         <p class="city-region">Region: ${city.region}</p>
         <div class="image-container">
-        <img src="${city.url}" alt="${city.name}">
+        <img class ="image" src="${city.url}" alt="${city.name}">
          </div>
         <p class="year">Year Founded: ${city.year}</p>
     <p class="nickname">City Nickname: ${city.nickname}</p>
