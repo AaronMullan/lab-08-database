@@ -17,7 +17,7 @@ export async function getRegions() {
 }
 
 export async function addCity(city) {
-    const url = `${URL}/city`;
+    const url = `${URL}/cities`;
 
     const response = await fetch(url, {
         method: 'POST',
