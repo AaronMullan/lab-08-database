@@ -28,10 +28,10 @@ async function run() {
                 id SERIAL PRIMARY KEY NOT NULL,
                 name VARCHAR(256) NOT NULL,
                 year INTEGER NOT NULL,
-                is_westcoast BOOLEAN NOT NULL,
-                nickname VARCHAR(256) NOT NULL,
+                westcoast BOOLEAN NOT NULL,
+                nickname VARCHAR(256),
                 region_id INTEGER NOT NULL REFERENCES regions(id),
-                url VARCHAR(256) NOT NULL
+                url VARCHAR(256)
             );
           
         `);

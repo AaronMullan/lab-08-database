@@ -22,6 +22,7 @@ const PORT = process.env.PORT;
 app.use(morgan('dev'));
 app.use(cors());
 app.use(express.static('public'));
+app.use(express.json());
 // (add middleware utils: logging, cors, static files from public)
 // app.use(...)
 
@@ -52,12 +53,12 @@ app.get ('/api/cities', async (req, res) => {
 
 });
    
-app.post ('/api/cities'), async (req, res) => {
+app.post('/api/cities', async (req, res) => {
     const city = req.body;
 
     try {
         const result = await client.query (`
-            INSERT INTO cities (name, year, isWestcoast, nickname, region, url)
+            INSERT INTO cities (name, year, westcoast, nickname, region_id, url)
             VALUES ($1, $2, $3, $4, $5, $6)
             RETURNING *;
             `,
@@ -71,7 +72,7 @@ app.post ('/api/cities'), async (req, res) => {
             error: err.message || err
         });
     }
-};
+});
 
 app.get('/api/region', async (req, res) => {
 
