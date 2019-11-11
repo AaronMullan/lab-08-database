@@ -14,6 +14,7 @@ class CityForm extends Component {
                 name: formData.get('name'),
                 regionId: parseInt(formData.get('region-id')),
                 url: formData.get('url'),
+                nickname: formData.get('nickname'),
                 year: parseInt(formData.get('year')),
                 isWestcoast: formData.get('is-Westcoast') === 'on'
             };
@@ -32,9 +33,9 @@ class CityForm extends Component {
     }
 
     renderHTML() {
-        const cities = this.props.city;
-        const optionsList = cities.map(cities => {
-            return `<option value="${cities.id}">${cities.name}</option>`;
+        const regions = this.props.region;
+        const optionsList = regions.map(region => {
+            return `<option value="${region.id}">${region.name}</option>`;
         });
 
         const joinedOptionsList = optionsList.join('');
@@ -55,7 +56,7 @@ class CityForm extends Component {
                         </p>
                         <p>
                             <label for="url">Image Url</label>
-                            <input id="url" name="url" required>
+                            <input id="url" name="url" required placeholder="Image URL">
                         </p>
                             <p>
                                 <label for="year">Year Founded</label>
@@ -72,7 +73,7 @@ class CityForm extends Component {
                                     <fieldset for="is-Westcoast">
                                         <legend>Is Westcoast?</legend>
                                         <label class="horizontally-centered">
-                                <input id="is-westcoast" name="is-westcoast" type="checkbox"> Yes</label>
+                                     <input id="is-westcoast" name="is-westcoast" type="checkbox"> Yes</label>
                                     </fieldset>
                                         <p>
                                             <button>Add This City</button>

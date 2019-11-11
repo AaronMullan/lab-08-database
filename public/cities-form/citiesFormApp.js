@@ -11,8 +11,8 @@ class CityFormApp extends Component {
 
         const main = dom.querySelector('main');
 
-        const types = await getRegions();
-        const cityForm = new CityForm({ types });
+        const region = await getRegions();
+        const cityForm = new CityForm({ region });
         main.appendChild(cityForm.renderDOM());
     }
 

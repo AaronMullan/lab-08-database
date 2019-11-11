@@ -1,4 +1,4 @@
-import App from './citiesFormApp.js';
+import CityApp from './citiesFormApp.js';
 
-const app = new App();
+const app = new CityApp();
 document.body.prepend(app.renderDOM());
