@@ -11,7 +11,6 @@ main {
         padding: 10px;
         height:auto;
         grid-gap: 50px;
-
 }
 
 body {
@@ -28,8 +27,4 @@ p{
 
 h1{
     color:white;
-}
-
-.header {
-   
 }
