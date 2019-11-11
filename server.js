@@ -72,6 +72,7 @@ app.post ('/api/cities'), async (req, res) => {
         });
     }
 };
+
 // Start the server
 // (use PORT from .env!)
 
