@@ -42,7 +42,7 @@ class CityForm extends Component {
 
         console.log(joinedOptionsList);
         return /*html*/`
-                < form class="city-form" >
+                <form class="city-form">
                     <p>
                         <label for="name">Name</label>
                         <input id="name" name="name" required placeholder="City">
@@ -71,7 +71,7 @@ class CityForm extends Component {
                                     </p>
                                 
                                     <fieldset for="is-Westcoast">
-                                        <legend>Is Westcoast?</legend>
+                                        <legend>Is it Westcoast?</legend>
                                         <label class="horizontally-centered">
                                      <input id="is-westcoast" name="is-westcoast" type="checkbox"> Yes</label>
                                     </fieldset>
