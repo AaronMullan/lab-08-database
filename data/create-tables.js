@@ -30,7 +30,8 @@ async function run() {
                 year INTEGER NOT NULL,
                 is_westcoast BOOLEAN NOT NULL,
                 nickname VARCHAR(256) NOT NULL,
-                region_id INTEGER NOT NULL REFERENCES regions(id)
+                region_id INTEGER NOT NULL REFERENCES regions(id),
+                url VARCHAR(256) NOT NULL
             );
           
         `);
