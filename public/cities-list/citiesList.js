@@ -6,7 +6,6 @@ class CitiesList extends Component {
     
     onRender(dom) {
         const cities = this.props.cities;
-console.log(this.props);
         cities.forEach(city => {
             const props = { city: city };
             const cityItem = new CitiesItem(props);
