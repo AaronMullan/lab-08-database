@@ -11,7 +11,7 @@ class Header extends Component {
              <img class="icon" src="./asset/cityscape.png">
         <div class="buttons">
              <a class ="button" href ="./cities-list.html">Cities</a>
-             <a class ="button" href ="./cities-forms.html">Add City</a>
+             <a class ="button" href ="./cities-form.html">Add City</a>
             </div>
         </div>
         `;
