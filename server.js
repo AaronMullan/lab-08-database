@@ -52,6 +52,41 @@ app.get ('/api/cities', async (req, res) => {
     }
 
 });
+
+app.get('/api/cats/:id', async (req, res) => {
+    const id = req.params.id;
+
+    try {
+        const result = await client.query(`
+                SELECT
+                c.*,
+                r.name as region
+            FROM cities c
+            JOIN regions r
+            ON c.region_id = r.id
+            WHERE c.id = $1;
+        `,
+        [id]);
+
+        const city = result.rows[0];
+        if (!city) {
+            res.status(404).json({
+                error: `City id ${id} does not exist`
+            });
+        }
+        else {
+            res.json(result.rows[0]);
+        }
+
+    }
+    catch (err) {
+        console.log(err);
+        res.status(500).json({
+            error: err.message || err
+        });
+    }
+
+});
    
 app.post('/api/cities', async (req, res) => {
     const city = req.body;
