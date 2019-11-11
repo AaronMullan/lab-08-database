@@ -57,7 +57,7 @@ app.post ('/api/cities'), async (req, res) => {
 
     try {
         const result = await client.query (`
-            INSERT INTO cities (name, year, isWestcoast, nickname, region, url)
+            INSERT INTO cities (name, year, is_westcoast, nickname, region, url)
             VALUES ($1, $2, $3, $4, $5, $6)
             RETURNING *;
             `,

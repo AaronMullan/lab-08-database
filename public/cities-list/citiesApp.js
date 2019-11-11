@@ -17,7 +17,6 @@ class CityListApp extends Component {
             list.update({ cities: city });
         });
     }
-
     renderHTML() {
         return /*html*/`
             <div>
