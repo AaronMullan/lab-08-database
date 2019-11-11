@@ -12,15 +12,16 @@ class CityForm extends Component {
 
             const city = {
                 name: formData.get('name'),
-                regionId: parseInt(formData.get('region-id')),
+                region: parseInt(formData.get('region-id')),
                 url: formData.get('url'),
                 nickname: formData.get('nickname'),
                 year: parseInt(formData.get('year')),
-                isWestcoast: formData.get('is-Westcoast') === 'on'
+                isWestcoast: formData.get('westcoast') === 'on'
             };
 
             try {
                 const saved = await addCity(city);
+                console.log(city);
                 console.log(saved);
 
                 window.location = `cities-list.html`;
@@ -69,13 +70,13 @@ class CityForm extends Component {
 
                                     <p>
                                     <label for="nickname">City Nickname</label>
-                                    <input id="nickname" name="name" required placeholder="City Nickname">
+                                    <input id="nickname" name="name" placeholder="City Nickname">
                                     </p>
                                 
-                                    <fieldset for="is-Westcoast">
+                                    <fieldset for="westcoast">
                                         <legend>Is it Westcoast?</legend>
                                         <label class="horizontally-centered">
-                                     <input id="is-westcoast" name="is-westcoast" type="checkbox"> Yes</label>
+                                     <input id="westcoast" name="westcoast" type="checkbox"> Yes</label>
                                     </fieldset>
                                         <p>
                                             <button class="button">Add This City</button>
