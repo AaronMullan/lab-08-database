@@ -30,3 +30,9 @@ export async function addCity(city) {
     const data = await response.json();
     return data;
 }
+
+export function getCity(id) {  
+    const url = `${URL}/city/${id}`;
+    return fetch(url)
+        .then(response => response.json());
+}
