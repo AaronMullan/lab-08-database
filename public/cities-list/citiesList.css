@@ -28,3 +28,8 @@ p{
 h1{
     color:white;
 }
+
+
+.link {
+    text-decoration: none;
+};

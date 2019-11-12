@@ -9,19 +9,21 @@ class CityListApp extends Component {
         const header = new Header({ title: 'List of City' });
         dom.prepend(header.renderDOM());
 
-        const list = new CitiesList({ cities: [] });
+        const cityList = new CitiesList({ cities: [] });
+
         const main = dom.querySelector('main');
-        main.appendChild(list.renderDOM());
+        main.appendChild(cityList.renderDOM());
 
         getCities().then(city => {
-            list.update({ cities: city });
+            cityList.update({ cities: city });
         });
     }
     renderHTML() {
         return /*html*/`
             <div>
                 <!-- header goes here -->
-                <main></main>
+                <main>
+                </main>
             </div>
         `;
     }

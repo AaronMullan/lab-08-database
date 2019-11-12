@@ -53,7 +53,7 @@ app.get ('/api/cities', async (req, res) => {
 
 });
 
-app.get('/api/cats/:id', async (req, res) => {
+app.get('/api/city/:id', async (req, res) => {
     const id = req.params.id;
 
     try {
@@ -71,7 +71,7 @@ app.get('/api/cats/:id', async (req, res) => {
         const city = result.rows[0];
         if (!city) {
             res.status(404).json({
-                error: `City id ${id} does not exist`
+                error: `City ${id} does not exist`
             });
         }
         else {
