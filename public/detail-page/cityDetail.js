@@ -3,8 +3,8 @@ import Component from '../Component.js';
 class CityDetail extends Component {
     renderHTML() {
         const city = this.props.city;
-        const json = JSON.stringify(city, true, 4);
-        console.log(city);
+        // const json = JSON.stringify(city, true, 4);
+
         return /*html*/ `
         <li class = "city-item">
       
