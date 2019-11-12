@@ -1,0 +1,26 @@
+.city-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height:auto ;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+.image  {
+    width: 250px;
+    height: 200px;
+}
+
+.nickname {
+font-weight: bold;
+}
+
+
+.link {
+    text-decoration: none;
+};

@@ -31,7 +31,7 @@ export async function addCity(city) {
     return data;
 }
 
-export function getCity(id) {  
+export async function getCity(id) {  
     const url = `${URL}/city/${id}`;
     return fetch(url)
         .then(response => response.json());

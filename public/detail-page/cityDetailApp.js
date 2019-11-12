@@ -17,7 +17,7 @@ class CityDetailApp extends Component {
 
         const searchParams = new URLSearchParams(window.location.search);
         const id = searchParams.get('id');
-
+        console.log('cityDetailAPp', id);
         if (!id) {
             window.location = 'cities-list.html';
             return;
@@ -27,7 +27,9 @@ class CityDetailApp extends Component {
             const city = await getCity(id);
             const cityDetail = new CityDetail({ city });
             main.appendChild(cityDetail.renderDOM());
+            console.log('tryApp', city);
         }
+    
         catch (err) {
             console.log(err);
         }
@@ -43,7 +45,7 @@ class CityDetailApp extends Component {
                 <div>
                     <!-- header goes here -->
                     <main>
-                        
+                  
                     </main>
                 </div>
             `;

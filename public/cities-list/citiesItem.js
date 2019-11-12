@@ -4,7 +4,7 @@ class CitiesItem extends Component {
 
     renderHTML(){
         const city = this.props.city;
-
+        console.log(city, 'city')
         return /*html*/ `
 
         <li class = "city-item">
