@@ -14,9 +14,9 @@ class CityForm extends Component {
                 name: formData.get('name'),
                 region: parseInt(formData.get('region-id')),
                 url: formData.get('url'),
-                nickname: formData.get('nickname'),
-                year: parseInt(formData.get('year')),
-                isWestcoast: formData.get('westcoast') === 'on'
+                textarea: formData.get('textarea'),
+                type: parseInt(formData.get('types-id'))
+
             };
 
             try {
@@ -35,13 +35,18 @@ class CityForm extends Component {
 
     renderHTML() {
         const regions = this.props.region;
-        const optionsList = regions.map(region => {
+        const types = this.props.types;
+        const optionsListRegions = regions.map(region => {
             return `<option value="${region.id}">${region.name}</option>`;
         });
 
-        const joinedOptionsList = optionsList.join('');
+        const optionsListType = types.map(type => {
+            return `<option value="${type.id}">${type.name}</option>`;
+        });
 
-        console.log(joinedOptionsList);
+        const joinedOptionsListRegions = optionsListRegions.join('');
+        const joinedOptionsListType = optionsListType.join('');
+
         return /*html*/`
                 <form class="city-form">
 
@@ -54,30 +59,27 @@ class CityForm extends Component {
                             <label for="region">Region</label>
                             <select id="region" name="region-id" required>
                                 <option disabled selected>&lt;select a region&gt;</option>
-                                ${joinedOptionsList}
+                                ${joinedOptionsListRegions}
                             </select>
                         </p>
+                        
+                        <p>
+                        <label for="types">Type</label>
+                        <select id="types" name="types-id" required>
+                            <option disabled selected>&lt;select a type&gt;</option>
+                            ${joinedOptionsListType}
+                        </select>
+                    </p>
+
                         <p>
                             <label for="url">Image Url</label>
                             <input id="url" name="url" required placeholder="Image URL">
                         </p>
-                            <p>
-                                <label for="year">Year Founded</label>
-                                <input id="year"
-                                    name="year" required  pattern="[0-9]{4}"
-                                    placeholder="2005" title="Four digit year">
-                             </p>
 
-                                    <p>
-                                    <label for="nickname">City Nickname</label>
-                                    <input id="nickname" name="name" placeholder="City Nickname">
-                                    </p>
-                                
-                                    <fieldset for="westcoast">
-                                        <legend>Is it Westcoast?</legend>
-                                        <label class="horizontally-centered">
-                                     <input id="westcoast" name="westcoast" type="checkbox"> Yes</label>
-                                    </fieldset>
+                        <p>Notes:
+                            <textarea> </textarea>
+                           </p>     
+                                    
                                         <p>
                                             <button class="button">Add This City</button>
                                         </p>
